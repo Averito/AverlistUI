@@ -1,6 +1,5 @@
 {
   "name": "averlist-ui",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "author": "Averito",
@@ -43,11 +42,13 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "sass": "^1.74.1",
     "storybook": "^8.0.6",
     "stylelint": "^16.3.1",
     "stylelint-config-recommended-scss": "^14.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.8.1",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "exports": {
