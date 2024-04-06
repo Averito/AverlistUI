@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Averito",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -48,5 +49,31 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-tsconfig-paths": "^4.3.2"
-  }
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/esm/bundle.mjs"
+      },
+      "require": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/cjs/bundle.cjs"
+      },
+      "types": "./types/index.d.ts",
+      "default": "./dist/esm/bundle.cjs"
+    }
+  },
+  "main": "./dist/cjs/bundle.cjs",
+  "module": "./dist/esm/bundle.js",
+  "types": "./types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Averito/AverlistUI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Averito/AverlistUI/issues",
+    "email": "avenantmar@gmail.com"
+  },
+  "homepage": "https://github.com/Averito/AverlistUI/blob/master/README.md"
 }
