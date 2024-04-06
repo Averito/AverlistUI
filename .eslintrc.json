@@ -7,11 +7,13 @@
   "root": true,
   "extends": [
     "eslint:recommended",
+    "plugin:prettier/recommended",
     "prettier"
   ],
   "plugins": [
     "prettier"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
