@@ -47,3 +47,4 @@ test/
 .eslintignore
 .lintstagedrc.json
 jest.config.js
+.storybook

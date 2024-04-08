@@ -9,10 +9,17 @@ export default defineConfig({
 	plugins: [react(), viteTsConfigPaths(), dts()],
 	build: {
 		lib: {
-			entry: resolve(__dirname, 'src/main.tsx'),
+			entry: resolve(__dirname, 'src/main.ts'),
 			name: 'AverlistUI',
 			formats: ['es'],
 			fileName: 'averlist-ui'
+		},
+		rollupOptions: {
+			external: ['react', 'react/jsx-runtime'],
+			output: {
+				assetFileNames: 'assets/[name][extname]',
+				entryFileNames: '[name].js'
+			}
 		}
 	}
 })
