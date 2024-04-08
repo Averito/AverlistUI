@@ -1,19 +1,22 @@
 import { FC, memo, PropsWithChildren } from 'react'
-import classnames from 'classnames'
 import { ButtonProps } from './Button.types.ts'
+import classnames from 'classnames'
 import styles from './Button.module.scss'
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = memo(
-	({ label, disabled = false, onClick, className, ...props }: ButtonProps) => {
+	({ disabled = false, onClick, className, size = 'medium', children }) => {
 		return (
 			<button
 				type='button'
-				className={classnames(styles.storybook_button, className)}
+				className={classnames(
+					styles.averlistui_button,
+					styles[`averlistui_button--${size}`],
+					className
+				)}
 				onClick={onClick}
 				disabled={disabled}
-				{...props}
 			>
-				{label}
+				{children}
 			</button>
 		)
 	}
