@@ -5,11 +5,6 @@ import styles from './Button.module.scss'
 
 /**
  * @description Button Component
- * @param {boolean} [disabled=false]
- * @param {MouseEventHandler<HTMLButtonElement>} [onClick]
- * @param {string | undefined} [className]
- * @param {'small' | 'medium' | 'large'} [size='medium']
- * @param {React.ReactNode} children
  * @type {FC<PropsWithChildren<ButtonProps>>}
  */
 export const Button: FC<PropsWithChildren<ButtonProps>> = memo(
