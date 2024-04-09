@@ -17,6 +17,29 @@ const meta: Meta<typeof Button> = {
 type Story = StoryObj<typeof meta>
 
 /**
+ * @description Default Button Story for Storybook
+ * @type {Story}
+ */
+export const DefaultButton: Story = {
+	args: {
+		children: 'Button',
+		size: 'medium'
+	}
+}
+
+/**
+ * @description Loading Button Story for Storybook
+ * @type {Story}
+ */
+export const LoadingButton: Story = {
+	args: {
+		children: 'Loading Button',
+		size: 'medium',
+		loading: true
+	}
+}
+
+/**
  * @description Small Button Story for Storybook
  * @type {Story}
  */
@@ -24,16 +47,6 @@ export const SmallButton: Story = {
 	args: {
 		children: 'Small Button',
 		size: 'small'
-	}
-}
-/**
- * @description Medium Button Story for Storybook
- * @type {Story}
- */
-export const MediumButton: Story = {
-	args: {
-		children: 'Medium Button',
-		size: 'medium'
 	}
 }
 

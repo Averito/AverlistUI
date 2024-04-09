@@ -8,20 +8,28 @@ export interface ButtonProps {
 	onClick?: MouseEventHandler<HTMLButtonElement>
 
 	/**
-	 * @description Props "Additional HTML Class name"
+	 * @description Additional HTML Class name
 	 * @type {string}
 	 */
 	className?: string
 
 	/**
-	 * @description Props "Is disabled button"
+	 * @description Is disabled button
 	 * @type {boolean}
 	 */
 	disabled?: boolean
 
 	/**
-	 * @description Props "Size button"
+	 * @description Size button
 	 * @type {string}
+	 * @default 'medium'
 	 */
 	size?: 'small' | 'medium' | 'large'
+
+	/**
+	 * @description Is loading button
+	 * @type {boolean}
+	 * @default false
+	 */
+	loading?: boolean
 }
