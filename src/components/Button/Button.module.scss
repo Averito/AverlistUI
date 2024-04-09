@@ -12,6 +12,10 @@
     outline 0.03s ease;
   font-size: 13px;
 
+  &:focus {
+    outline: none;
+  }
+
   &:disabled {
     filter: brightness(0.85);
     cursor: not-allowed;

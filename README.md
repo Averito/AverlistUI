@@ -33,12 +33,17 @@ import { Button } from 'averlist-ui';
 ### Использование
 
 ```tsx
-import { Loader } from 'averlist-ui'
+// main.ts or App.tsx
 
+import 'averlist-ui/style.css'
+```
+
+```tsx
+import { Button } from 'averlist-ui'
 
 export const Component = () => {
 	return (
-		<Loader size={20} />
+		<Button>Click me!</Button>
     )
 }
 ```
