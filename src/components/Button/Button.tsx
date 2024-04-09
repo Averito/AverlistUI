@@ -17,9 +17,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = memo(
 		loading = false,
 		children = 'Button'
 	}) => {
-		const onClickWrapper: MouseEventHandler<HTMLButtonElement> = (
-			event
-		): void => {
+		const onClickWrapper: MouseEventHandler<HTMLButtonElement> = event => {
 			if (loading) {
 				return
 			}

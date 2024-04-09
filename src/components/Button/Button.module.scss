@@ -17,26 +17,26 @@
     cursor: not-allowed;
   }
 
-  &:not(:disabled) {
+  &:is(&:not(&--loading)):not(:disabled) {
     &:hover {
       background-color: #5d51bb;
     }
-	  
-	  &:active {
-		  background-color: #584cb0;
-		  outline: 3px solid rgba(88, 76, 176, 0.77);
-	  }
+
+    &:active {
+	  background-color: #584cb0;
+      outline: 3px solid rgba(88, 76, 176, 0.77);
+	}
   }
 
   &--loading {
     gap: 10px;
 	  filter: brightness(0.85);
 	  cursor: wait;
-	  
+
 	  &:active {
 		  outline: none;
 	  }
-	  
+
 	  &:hover {
 		  background-color: #5d51bb;
 	  }
