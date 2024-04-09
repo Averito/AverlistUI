@@ -33,10 +33,6 @@
 	  filter: brightness(0.85);
 	  cursor: wait;
 
-	  &:active {
-		  outline: none;
-	  }
-
 	  &:hover {
 		  background-color: #5d51bb;
 	  }
