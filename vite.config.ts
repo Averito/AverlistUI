@@ -6,13 +6,23 @@ import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react(), viteTsConfigPaths(), dts()],
+	plugins: [
+		react(),
+		viteTsConfigPaths(),
+		dts({
+			insertTypesEntry: true
+		})
+	],
 	build: {
+		cssCodeSplit: false,
 		lib: {
-			entry: resolve(__dirname, 'src/main.ts'),
+			entry: './src/main.ts',
+			fileName: (format, entryName) =>
+				entryName === 'index'
+					? `index.${format}.js`
+					: `${entryName}/index.${format}.js`,
 			name: 'averlist-ui',
-			formats: ['es'],
-			fileName: 'averlist-ui'
+			formats: ['es']
 		},
 		rollupOptions: {
 			external: ['react', 'react/jsx-runtime'],

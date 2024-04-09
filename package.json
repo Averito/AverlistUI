@@ -1,6 +1,6 @@
 {
   "name": "averlist-ui",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "author": "Averito, Zetharion",
   "scripts": {
@@ -68,6 +68,9 @@
       },
       "types": "./types/index.d.ts",
       "default": "./dist/main.js"
+    },
+    "./styles.css": {
+      "import": "./dist/assets/style.css"
     }
   },
   "main": "dist/main.js",
