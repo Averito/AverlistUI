@@ -2,7 +2,7 @@
   "name": "averlist-ui",
   "version": "0.0.5",
   "type": "module",
-  "author": "Averito",
+  "author": "Averito, Zetharion",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

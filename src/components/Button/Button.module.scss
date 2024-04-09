@@ -1,0 +1,53 @@
+.averui_button {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #6c5dd4;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  transition:
+    background-color 0.3s ease,
+    outline 0.03s ease;
+  font-size: 13px;
+
+  &:disabled {
+    filter: brightness(0.85);
+    cursor: not-allowed;
+  }
+
+  &:is(&:not(&--loading)):not(:disabled) {
+    &:hover {
+      background-color: #5d51bb;
+    }
+
+    &:active {
+	  background-color: #584cb0;
+      outline: 3px solid rgba(88, 76, 176, 0.77);
+	}
+  }
+
+  &--loading {
+    gap: 10px;
+	  filter: brightness(0.85);
+	  cursor: wait;
+
+	  &:hover {
+		  background-color: #5d51bb;
+	  }
+  }
+
+  &--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  &--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  &--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
