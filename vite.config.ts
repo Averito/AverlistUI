@@ -10,7 +10,7 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: resolve(__dirname, 'src/main.ts'),
-			name: 'AverlistUI',
+			name: 'averlist-ui',
 			formats: ['es'],
 			fileName: 'averlist-ui'
 		},
@@ -20,6 +20,7 @@ export default defineConfig({
 				assetFileNames: 'assets/[name][extname]',
 				entryFileNames: '[name].js'
 			}
-		}
+		},
+		sourcemap: false
 	}
 })

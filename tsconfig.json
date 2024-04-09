@@ -23,7 +23,6 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "outDir": "dist",
-    "declarationMap": true,
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
