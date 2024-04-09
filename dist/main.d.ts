@@ -1,2 +1,1 @@
-
-//# sourceMappingURL=main.d.ts.map
+export { Loader } from './components/Loader';
