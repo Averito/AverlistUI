@@ -1,4 +1,4 @@
-import { FC, memo, PropsWithChildren } from 'react'
+import { FC, memo, MouseEventHandler, PropsWithChildren } from 'react'
 import { ButtonProps } from './Button.types.ts'
 import { Loader } from '@components/Loader'
 import classnames from 'classnames'
@@ -17,17 +17,26 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = memo(
 		loading = false,
 		children = 'Button'
 	}) => {
+		const onClickWrapper: MouseEventHandler<HTMLButtonElement> = (
+			event
+		): void => {
+			if (loading) {
+				return
+			}
+			onClick?.(event)
+		}
+
 		return (
 			<button
 				type='button'
 				className={classnames(
 					styles.averui_button,
 					styles[`averui_button--${size}`],
-					styles[`averui_button--loading-${loading}`],
+					{ [styles[`averui_button--loading`]]: loading },
 					className
 				)}
-				onClick={onClick}
-				disabled={loading ? true : disabled}
+				onClick={onClickWrapper}
+				disabled={disabled}
 			>
 				{children}
 				{loading && (

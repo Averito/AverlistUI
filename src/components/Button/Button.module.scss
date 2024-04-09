@@ -9,8 +9,7 @@
   color: #fff;
   transition:
     background-color 0.3s ease,
-    outline 0.03s ease,
-		width 0.3s ease;
+    outline 0.03s ease;
   font-size: 13px;
 
   &:disabled {
@@ -29,11 +28,13 @@
 	  }
   }
 
-  &--loading-true {
+  &--loading {
     gap: 10px;
-	  &:disabled {
-		  filter: brightness(0.85);
-		  cursor: wait;
+	  filter: brightness(0.85);
+	  cursor: wait;
+	  
+	  &:active {
+		  outline: none;
 	  }
 	  
 	  &:hover {
