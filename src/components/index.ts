@@ -4,6 +4,9 @@ import type { ButtonProps } from './Button'
 import { Loader } from './Loader'
 import type { LoaderProps } from './Loader'
 
-export { Button, Loader }
+import { Flex } from './Flex'
+import { FlexProps } from './Flex'
 
-export type { ButtonProps, LoaderProps }
+export { Button, Loader, Flex }
+
+export type { ButtonProps, LoaderProps, FlexProps }
