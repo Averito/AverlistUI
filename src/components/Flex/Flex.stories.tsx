@@ -20,13 +20,13 @@ type Story = StoryObj<typeof meta>
  */
 export const DefaultFlex: Story = {
 	args: {
-		children: <p>Example Text</p>,
-		justifyContent: 'flex-start',
-		alignItems: 'center',
-		flexDirection: 'column',
-		backgroundColor: '#fff',
-		margin: '2px',
-		width: 'fit-content'
+		children: (
+			<>
+				<p>Example Text</p>
+				<p>Example Text2</p>
+			</>
+		),
+		gap: '10px'
 	}
 }
 
