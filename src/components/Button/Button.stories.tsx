@@ -1,64 +1,57 @@
-import { Button } from './Button.tsx'
-import { fn } from '@storybook/test'
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-/**
- * @description Meta for Storybook
- * @type {Meta<typeof Button>}
- */
+import { Button } from '@/components'
+
 const meta: Meta<typeof Button> = {
-	title: 'AverlistUI/Button',
 	component: Button,
-	tags: ['autodocs'],
-	args: { onClick: fn() }
-}
-
-/** @description Type Story for Storybook */
-type Story = StoryObj<typeof meta>
-
-/**
- * @description Default Button Story for Storybook
- * @type {Story}
- */
-export const DefaultButton: Story = {
-	args: {
-		children: 'Button',
-		size: 'medium'
-	}
-}
-
-/**
- * @description Loading Button Story for Storybook
- * @type {Story}
- */
-export const LoadingButton: Story = {
-	args: {
-		children: 'Loading Button',
-		size: 'medium',
-		loading: true
-	}
-}
-
-/**
- * @description Small Button Story for Storybook
- * @type {Story}
- */
-export const SmallButton: Story = {
-	args: {
-		children: 'Small Button',
-		size: 'small'
-	}
-}
-
-/**
- * @description Large Button Story for Storybook
- * @type {Story}
- */
-export const LargeButton: Story = {
-	args: {
-		children: 'Large Button',
-		size: 'large'
+	argTypes: {
+		children: {
+			control: 'text',
+			description: 'Children'
+		},
+		size: {
+			description: 'Size',
+			options: ['Small', 'Medium', 'Large'],
+			control: { type: 'radio' }
+		},
+		disabled: {
+			description: 'Is disabled',
+			control: 'boolean'
+		},
+		loading: {
+			description: 'Is loading',
+			control: 'boolean'
+		}
 	}
 }
 
 export default meta
+type Story = StoryObj<typeof Button>
+
+export const Default: Story = {
+	args: {
+		children: 'Default',
+		size: 'medium'
+	}
+}
+
+export const Small: Story = {
+	args: {
+		children: 'Small',
+		size: 'medium'
+	}
+}
+
+export const Medium: Story = {
+	args: {
+		children: 'Medium',
+		size: 'medium'
+	}
+}
+
+export const Large: Story = {
+	args: {
+		children: 'Large',
+		size: 'large'
+	}
+}
