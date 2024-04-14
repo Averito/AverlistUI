@@ -23,10 +23,67 @@ export const DefaultFlex: Story = {
 		children: (
 			<>
 				<p>Example Text</p>
-				<p>Example Text2</p>
+				<p>Example Text</p>
+				<p>Example Text</p>
 			</>
 		),
-		gap: '10px'
+		width: '15px',
+		backgroundColor: '#fff',
+		gap: '15px'
+	}
+}
+
+/**
+ * @description Direction And Wrap Flex Story for Storybook
+ * @type {Story}
+ */
+export const DirectionAndWrapFlex: Story = {
+	args: {
+		children: (
+			<>
+				<p>Example Text</p>
+				<p>Example Text</p>
+				<p>Example Text</p>
+			</>
+		),
+		flexDirection: 'column',
+		flexWrap: 'wrap'
+	}
+}
+
+/**
+ * @description Justify And Align Flex Story for Storybook
+ * @type {Story}
+ */
+export const JustifyAndAlignFlex: Story = {
+	args: {
+		children: (
+			<>
+				<p>Example Text</p>
+				<p>Example Text</p>
+				<p>Example Text</p>
+			</>
+		),
+		justifyContent: 'center',
+		alignItems: 'center'
+	}
+}
+
+/**
+ * @description Margin And Padding Flex Story for Storybook
+ * @type {Story}
+ */
+export const MarginAndPaddingFlex: Story = {
+	args: {
+		children: (
+			<>
+				<p>Example Text</p>
+				<p>Example Text</p>
+				<p>Example Text</p>
+			</>
+		),
+		margin: '15px',
+		padding: '15px'
 	}
 }
 
