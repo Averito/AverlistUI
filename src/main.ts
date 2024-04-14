@@ -1,2 +1,2 @@
-export { Button, Loader } from './components'
-export type { ButtonProps, LoaderProps } from './components'
+export { Button, Loader, Flex } from './components'
+export type { ButtonProps, LoaderProps, FlexProps } from './components'
