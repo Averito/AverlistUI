@@ -1,5 +1,4 @@
 import { Checkbox } from './Checkbox'
-import { fn } from '@storybook/test'
 import { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 
