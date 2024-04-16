@@ -9,10 +9,7 @@ import { useState } from 'react'
 const meta: Meta<typeof Checkbox> = {
 	title: 'AverlistUI/Checkbox',
 	component: Checkbox,
-	tags: ['autodocs'],
-	args: {
-		checked: false
-	}
+	tags: ['autodocs']
 }
 
 /** @description Type Story for Storybook */
