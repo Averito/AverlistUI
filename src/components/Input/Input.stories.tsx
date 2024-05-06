@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Input } from '@/components'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 /**
  * @description Meta for Storybook
@@ -18,19 +18,11 @@ type Story = StoryObj<typeof meta>
 const InputWithHooks = () => {
 	const [changeValue, setChangeValue] = useState(meta.args?.value ?? '')
 
-	const handleChange = (value: string) => {
-		setChangeValue(value)
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+		setChangeValue(e.target.value)
 	}
 
-	return (
-		<Input
-			{...meta.args}
-			value={changeValue}
-			onChange={e => {
-				handleChange(e.currentTarget.value)
-			}}
-		/>
-	)
+	return <Input {...meta.args} value={changeValue} onChange={handleChange} />
 }
 
 /**

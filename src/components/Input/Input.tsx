@@ -12,14 +12,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			placeholder,
 			className,
 			name,
-			width,
+			width = '240px',
 			label,
 			type,
 			margin
 		},
 		ref
 	) => {
-		const widthStyle = { width: width ?? '240px' }
 		const marginStyle = { margin }
 
 		return (
@@ -29,7 +28,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 					ref={ref}
 					type={type}
 					className={classnames(styles.input, className)}
-					style={widthStyle}
+					style={{ width: width }}
 					name={name}
 					value={value}
 					onChange={onChange}
