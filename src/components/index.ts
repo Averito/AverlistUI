@@ -7,6 +7,9 @@ import type { LoaderProps } from './Loader'
 import { Flex } from './Flex'
 import { FlexProps } from './Flex'
 
-export { Button, Loader, Flex }
+import { Checkbox } from './Checkbox'
+import { CheckboxProps } from './Checkbox'
 
-export type { ButtonProps, LoaderProps, FlexProps }
+export { Button, Loader, Flex, Checkbox }
+
+export type { ButtonProps, LoaderProps, FlexProps, CheckboxProps }
