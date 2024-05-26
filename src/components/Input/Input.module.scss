@@ -1,30 +1,25 @@
 .input {
 	padding: 8px 10px;
 	border-radius: 4px;
-	color: rgb(52, 39, 95);
+	color: whitesmoke;
 	background-color: #1F1739;
 	font-weight: 400;
 	border: 1px solid #1F1739;
 	transition: border 0.2s ease;
-	
+
 	&:hover {
 		border: 1px solid #7f38ab;
 	}
-	
-	&:focus {
-		outline: none;
-		border: 1px solid #7f38ab;
-	}
-}
 
-@-webkit-keyframes autofill {
-	to {
-		color: inherit;
-		background: transparent;
+	&:focus {
+		outline: 2px solid #7f38ab;
+		border: 1px solid #7f38ab;
 	}
 }
 
 .label {
 	margin-bottom: 5px;
 	font-size: 17px;
+	color: whitesmoke;
+	font-weight: 500;
 }

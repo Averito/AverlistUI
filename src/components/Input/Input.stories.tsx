@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Args, Meta, StoryObj } from '@storybook/react'
 import { Input } from '@/components'
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, FC, useState } from 'react'
 
 /**
  * @description Meta for Storybook
@@ -15,14 +15,14 @@ const meta: Meta<typeof Input> = {
 /** @description Type Story for Storybook */
 type Story = StoryObj<typeof meta>
 
-const InputWithHooks = () => {
-	const [changeValue, setChangeValue] = useState(meta.args?.value ?? '')
+const InputWithHooks: FC<Args> = props => {
+	const [changeValue, setChangeValue] = useState(props?.value ?? '')
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setChangeValue(e.target.value)
 	}
 
-	return <Input {...meta.args} value={changeValue} onChange={handleChange} />
+	return <Input {...props} value={changeValue} onChange={handleChange} />
 }
 
 /**
@@ -30,9 +30,10 @@ const InputWithHooks = () => {
  * @type {Story}
  */
 export const DefaultInput: Story = {
-	render: () => <InputWithHooks />,
+	render: args => <InputWithHooks {...args} />,
 	args: {
-		placeholder: 'Default Input'
+		placeholder: 'Default Input',
+		label: 'Default Input'
 	}
 }
 
