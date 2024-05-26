@@ -7,6 +7,9 @@ import type { LoaderProps } from './Loader'
 import { Flex } from './Flex'
 import { FlexProps } from './Flex'
 
-export { Button, Loader, Flex }
+import { Input } from '@components/Input'
+import { InputProps } from '@components/Input'
 
-export type { ButtonProps, LoaderProps, FlexProps }
+export { Button, Loader, Flex, Input }
+
+export type { ButtonProps, LoaderProps, FlexProps, InputProps }
